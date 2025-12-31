@@ -8,9 +8,8 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.StringTokenizer;
 
-// 트리의 부모찾기 : 백준
-// https://www.acmicpc.net/problem/11725
-public class S11725 {
+// 트리의 부모찾기 : 백준 https://www.acmicpc.net/problem/11725
+public class S11725트리의부모찾기 {
     static int node;
     static List<List<Integer>> adjList = new ArrayList<>();
     static int[] parent;

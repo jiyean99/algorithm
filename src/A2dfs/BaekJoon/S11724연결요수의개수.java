@@ -8,9 +8,8 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.StringTokenizer;
 
-// 연결요소의 개수 : 백준
-// https://www.acmicpc.net/problem/11724
-public class S11724 {
+// 연결요소의 개수 : 백준 https://www.acmicpc.net/problem/11724
+public class S11724연결요수의개수 {
     // 첫째 줄에 정점의 개수 N과 간선의 개수 M이 주어진다. (1 ≤ N ≤ 1,000, 0 ≤ M ≤ N×(N-1)/2)
     // 둘째 줄부터 M개의 줄에 간선의 양 끝점 u와 v가 주어진다. (1 ≤ u, v ≤ N, u ≠ v)
     // 같은 간선은 한 번만 주어진다.

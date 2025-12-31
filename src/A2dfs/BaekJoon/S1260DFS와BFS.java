@@ -5,7 +5,7 @@ import java.util.*;
 
 // DFS와 BFS : 백준
 // https://www.acmicpc.net/problem/1260
-public class S1260 {
+public class S1260DFS와BFS {
     static int n;
     static int m;
     static int v;
