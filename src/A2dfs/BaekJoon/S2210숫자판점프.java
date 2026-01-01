@@ -15,14 +15,7 @@ public class S2210숫자판점프 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int[][] grid = new int[5][5];
-//        for (int i = 0; i < 5; i++) {
-//            StringTokenizer st = new StringTokenizer(br.readLine());
-//            grid[i][0] = Integer.parseInt(st.nextToken());
-//            grid[i][1] = Integer.parseInt(st.nextToken());
-//            grid[i][2] = Integer.parseInt(st.nextToken());
-//            grid[i][3] = Integer.parseInt(st.nextToken());
-//            grid[i][4] = Integer.parseInt(st.nextToken());
-//        }
+
         for (int i = 0; i < 5; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             for (int j = 0; j < 5; j++) {

@@ -9,7 +9,6 @@ import java.util.StringTokenizer;
 
 // TODO
 // 숨바꼭질 https://www.acmicpc.net/problem/1697
-// set에 담아서 중복 제거
 public class S1697숨바꼭질 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

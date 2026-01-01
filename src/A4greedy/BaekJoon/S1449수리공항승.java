@@ -22,16 +22,29 @@ public class S1449수리공항승 {
         }
         Arrays.sort(spotArr);
 
-        // 배열에 구멍위치들을 담고 오름차순 정렬을 한다.
-        // 첫번째 테이프 칠했을 때 몇번째 구멍까지 커버가 되는지 확인한다.
-        // 몇번째 구멍까지 커버 되는지 어떻게 확인하나?
-        // 커버 시작위치부터 테이프 길이까지를 가산하고, 가산된 길이 위치가 다음 구멍위치들이 있으면 거기까지 막고, list에서 구멍들을 뺀다.
-
         int count = 0;
-//        while ()
+        int i = 0;
 
+        // 구멍 위치를 정렬해두고, 왼쪽(가장 작은 위치)부터 순서대로 처리한다.
+        // 현재 구멍을 테이프 시작점(startSpot)으로 잡고,
+        // 그 테이프로 덮을 수 있는 범위(coverEnd) 안에 들어오는 다음 구멍들은 계속 넘어간다(스킵).
+        // 다음 구멍이 coverEnd를 넘는 순간, 새 테이프가 필요하므로 count를 1 증가시키고
+        // 그 구멍을 새로운 startSpot으로 갱신해서 같은 과정을 반복한다.
+        // 모든 구멍을 처리(i가 끝까지 감)하면 종료한다.
 
-        System.out.println(Arrays.toString(spotArr));
+        while (i < n) {
+            int startSpot = spotArr[i];
+            int coverEnd = startSpot + l - 1;
+
+            count++;
+            i++;
+
+            while (i < n && spotArr[i] <= coverEnd) {
+                i++;
+            }
+        }
+        System.out.println(count);
+
     }
 
 }

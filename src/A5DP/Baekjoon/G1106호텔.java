@@ -32,13 +32,14 @@ public class G1106호텔 {
         // 1 1
 
         // 가격 별 고객수를 담는 주머니
-        // 1원일 때 고객수, 2원일 때 고객수, 3원일떄 고객수 ,,,
+        // 1원일 때 고객수, 2원일 때 고객수, 3원일떄 고객수 ,,, 최대로 필요한 고객수 * 각 도시 유치비용 까지의 경우의 수를 발생시킬 수 있다
 
-        int[] dp = new int[1000 * 100];
+        int[] dp = new int[1000 * 100 + 1];
+
         for (int i = 0; i < dp.length; i++) {
-//            int temp = i / n; // 몫을 담는 temp
-//            dp[i] = cityInfoArr[0][1] * temp;
-//            for (int j = 0; j < ; j++) {
+            int cost = cityInfoArr[i][0];
+            int value = cityInfoArr[i][1];
+//            for (int j <= ; j < ; j++) {
 //
 //            }
         }
