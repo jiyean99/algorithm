@@ -27,22 +27,30 @@ public class G1106호텔 {
             cityInfoArr[i][1] = Integer.parseInt(st.nextToken());
         }
 
-        // 가격, 고객수
-        // 3 5
-        // 1 1
-
         // 가격 별 고객수를 담는 주머니
         // 1원일 때 고객수, 2원일 때 고객수, 3원일떄 고객수 ,,, 최대로 필요한 고객수 * 각 도시 유치비용 까지의 경우의 수를 발생시킬 수 있다
+        // 이 때 n원(dp[n])일 때 c명을 만족한다면 break
 
-        int[] dp = new int[1000 * 100 + 1];
+        int minCost = 1000 * 100;
+        int[] dp = new int[minCost + 1];
+        Arrays.fill(dp, minCost);
+        dp[0] = 0;
 
-        for (int i = 0; i < dp.length; i++) {
+        for (int i = 0; i < n; i++) {
+            // 우선 도시 수 만큼 순회
             int cost = cityInfoArr[i][0];
-            int value = cityInfoArr[i][1];
-//            for (int j <= ; j < ; j++) {
-//
-//            }
+            int value = cityInfoArr[i][1]; // 도시 유치 인원
+            for (int j = value; j < dp.length; j++) {
+                // 각 도시 유치 인원부터 시작 하여 dp 길이만큼 순회
+                dp[j] = Math.min(dp[j], dp[j - value] + cost);
+
+            }
         }
-        System.out.println(Arrays.toString(dp));
+
+        for (int i = c; i < dp.length; i++) {
+            minCost = Math.min(minCost, dp[i]);
+        }
+
+        System.out.println(minCost);
     }
 }
